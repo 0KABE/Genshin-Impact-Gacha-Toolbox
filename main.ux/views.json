@@ -1,0 +1,41 @@
+{
+  "props" : {
+    "id" : "main"
+  },
+  "views" : [
+    {
+      "type" : "button",
+      "props" : {
+        "id" : "button[0]",
+        "title" : "Analyze ",
+        "frame" : {
+          "y" : 170,
+          "x" : 20,
+          "width" : 360,
+          "height" : 36
+        }
+      },
+      "events" : {
+        "tapped" : {
+          "$type" : "$event",
+          "$props" : {
+            "selector" : "tapped"
+          }
+        }
+      }
+    },
+    {
+      "type" : "input",
+      "props" : {
+        "frame" : {
+          "y" : 10,
+          "x" : 20,
+          "width" : 360,
+          "height" : 150
+        },
+        "id" : "input_url",
+        "radius" : 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "props": {
+    "id": "detail.ux"
+  },
+  "events": {
+    "appeared": {
+      "$type": "$event",
+      "$props": {
+        "selector": "appeared"
+      }
+    }
+  },
+  "views": [
+    {
+      "type": "tab",
+      "props": {
+        "frame": {
+          "y": 20,
+          "x": 35,
+          "width": 320,
+          "height": 28
+        },
+        "id": "tab_type",
+        "items": [
+          "角色UP",
+          "武器UP",
+          "常驻",
+          "新手"
+        ],
+        "index": 0
+      },
+      "events": {
+        "changed": {
+          "$type": "$event",
+          "$props": {
+            "selector": "changed"
+          }
+        }
+      }
+    },
+    {
+      "type": "label",
+      "props": {
+        "align": 1,
+        "frame": {
+          "y": 86,
+          "x": 39,
+          "width": 100,
+          "height": 50
+        },
+        "id": "label[0]",
+        "text": "最新抽卡数"
+      }
+    },
+    {
+      "type": "label",
+      "props": {
+        "align": 1,
+        "frame": {
+          "y": 136,
+          "x": 39,
+          "width": 100,
+          "height": 50
+        },
+        "id": "label[1]",
+        "text": "距离保底"
+      }
+    },
+    {
+      "type": "label",
+      "props": {
+        "align": 1,
+        "frame": {
+          "y": 186,
+          "x": 39,
+          "width": 100,
+          "height": 50
+        },
+        "id": "label[2]",
+        "text": "总抽卡"
+      }
+    },
+    {
+      "type": "label",
+      "props": {
+        "align": 1,
+        "frame": {
+          "y": 236,
+          "x": 39,
+          "width": 100,
+          "height": 50
+        },
+        "id": "label[3]",
+        "text": "五星个数"
+      }
+    },
+    {
+      "type": "label",
+      "props": {
+        "align": 1,
+        "frame": {
+          "y": 286,
+          "x": 39,
+          "width": 100,
+          "height": 50
+        },
+        "id": "label[4]",
+        "text": "平均出金"
+      }
+    },
+    {
+      "type": "label",
+      "props": {
+        "align": 1,
+        "frame": {
+          "y": 186,
+          "x": 145,
+          "width": 225,
+          "height": 50
+        },
+        "id": "total_gacha",
+        "text": ""
+      }
+    },
+    {
+      "type": "label",
+      "props": {
+        "align": 1,
+        "frame": {
+          "y": 236,
+          "x": 184,
+          "width": 155,
+          "height": 50
+        },
+        "id": "rank_5_count",
+        "text": ""
+      }
+    },
+    {
+      "type": "label",
+      "props": {
+        "align": 1,
+        "frame": {
+          "y": 286,
+          "x": 145,
+          "width": 235,
+          "height": 50
+        },
+        "id": "average_rank_5",
+        "text": ""
+      }
+    },
+    {
+      "type": "label",
+      "props": {
+        "align": 1,
+        "frame": {
+          "y": 86,
+          "x": 145,
+          "width": 225,
+          "height": 50
+        },
+        "id": "previous_rank_5",
+        "text": ""
+      }
+    },
+    {
+      "type": "label",
+      "props": {
+        "align": 1,
+        "frame": {
+          "y": 136,
+          "x": 145,
+          "width": 225,
+          "height": 50
+        },
+        "id": "count_to_guaranteed",
+        "text": ""
+      }
+    }
+  ]
+}
