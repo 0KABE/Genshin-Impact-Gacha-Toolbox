@@ -2,6 +2,14 @@
   "props": {
     "id": "main"
   },
+  "events": {
+    "appeared": {
+      "$type": "$event",
+      "$props": {
+        "selector": "main_view_appeared"
+      }
+    }
+  },
   "views": [
     {
       "type": "button",
