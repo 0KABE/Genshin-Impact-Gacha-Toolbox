@@ -23,6 +23,8 @@ function analyzeHistory(histories) {
     Character: 90
   }
 
+  setRawHistories(histories)
+
   for (const type of Object.keys(Statistics)) {
     Statistics[type].totalCount = histories[type].length
 
@@ -73,8 +75,21 @@ const Statistics = {
   }
 }
 
+const RawHistories = { data: null }
+const HistoryJsonFile = 'genshin_impact_wish_history.json'
+
+function getRawHistories() {
+  return RawHistories.data
+}
+
+function setRawHistories(histories) {
+  RawHistories.data = histories
+}
+
 module.exports = {
   requestHistory: requestHistory,
   analyzeHistory: analyzeHistory,
-  Statistics: Statistics
+  getRawHistories: getRawHistories,
+  Statistics: Statistics,
+  HistoryJsonFile: HistoryJsonFile
 }

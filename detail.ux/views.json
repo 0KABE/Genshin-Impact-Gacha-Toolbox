@@ -177,6 +177,27 @@
         "id": "count_to_guaranteed",
         "text": ""
       }
+    },
+    {
+      "type": "button",
+      "props": {
+        "id": "save_history_button",
+        "title": "Update/Save history",
+        "frame": {
+          "y": 600,
+          "x": 20,
+          "width": 360,
+          "height": 36
+        }
+      },
+      "events": {
+        "tapped": {
+          "$type": "$event",
+          "$props": {
+            "selector": "save_history_tapped"
+          }
+        }
+      }
     }
   ]
 }

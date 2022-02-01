@@ -1,7 +1,5 @@
 const app = require("./scripts/app");
 
-const HistoryJsonFile = 'genshin_impact_wish_history.json'
-
 exports.analyze_tapped = sender => {
   // loading
   // TODO: load data
@@ -15,11 +13,13 @@ exports.analyze_tapped = sender => {
 }
 
 exports.load_history_tapped = async sender => {
-  if (!$drive.exists(HistoryJsonFile)) {
-    $ui.toast(`${HistoryJsonFile} does not exist`)
+  console.log('load_history_tapped')
+  if (!$drive.exists(app.HistoryJsonFile)) {
+    $ui.toast(`${app.HistoryJsonFile} does not exist`)
   } else {
-    const histories = await $drive.download(HistoryJsonFile);
-    app.analyzeHistory(JSON.parse(histories['string']))
+    console.log(`read icloud file ${app.HistoryJsonFile}`)
+    const data = $drive.read(app.HistoryJsonFile);
+    app.analyzeHistory(JSON.parse(data['string']))
     $ui.push('detail')
   }
 }
