@@ -2,6 +2,9 @@ function requestHistory(url, complete) {
   console.log(`app.js url: ${url}`)
   $nodejs.run({
     path: 'scripts/index.js',
+    query: {
+      url: url
+    },
     argv: [
       '--mode',
       'jsbox',

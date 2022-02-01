@@ -11,6 +11,7 @@ const RequestInterval = 250
 
 exports.getAllTypeUrl = function getAllTypeUrl(baseUrl) {
     const urls = {}
+    console.log(`base url: ${baseUrl}`)
     console.log(Object.keys(GachaType))
     for (const type of Object.keys(GachaType)) {
         const code = GachaType[type]

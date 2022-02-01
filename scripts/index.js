@@ -31,9 +31,10 @@ function exportJson(histories) {
 
 async function run() {
   console.log(`starting a spider`)
-  console.log(argv)
+  console.log(`argv: ${JSON.stringify(argv)}`)
+  console.log(`query: ${JSON.stringify($context.query)}`)
 
-  const urls = getAllTypeUrl(argv.url)
+  const urls = getAllTypeUrl(argv.mode === 'jsbox' ? $context.query.url : argv.url)
 
   const histories = {}
   for (const type of Object.keys(GachaType)) {
