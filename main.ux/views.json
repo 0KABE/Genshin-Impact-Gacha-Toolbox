@@ -1,40 +1,61 @@
 {
-  "props" : {
-    "id" : "main"
+  "props": {
+    "id": "main"
   },
-  "views" : [
+  "views": [
     {
-      "type" : "button",
-      "props" : {
-        "id" : "button[0]",
-        "title" : "Analyze ",
-        "frame" : {
-          "y" : 170,
-          "x" : 20,
-          "width" : 360,
-          "height" : 36
+      "type": "button",
+      "props": {
+        "id": "analyze_button",
+        "title": "Analyze ",
+        "frame": {
+          "y": 190,
+          "x": 20,
+          "width": 175,
+          "height": 36
         }
       },
-      "events" : {
-        "tapped" : {
-          "$type" : "$event",
-          "$props" : {
-            "selector" : "tapped"
+      "events": {
+        "tapped": {
+          "$type": "$event",
+          "$props": {
+            "selector": "analyze_tapped"
           }
         }
       }
     },
     {
-      "type" : "input",
-      "props" : {
-        "frame" : {
-          "y" : 10,
-          "x" : 20,
-          "width" : 360,
-          "height" : 150
+      "type": "button",
+      "props": {
+        "id": "load_history_button",
+        "title": "Load History",
+        "frame": {
+          "y": 190,
+          "x": 205,
+          "width": 175,
+          "height": 36
+        }
+      },
+      "events": {
+        "tapped": {
+          "$type": "$event",
+          "$props": {
+            "selector": "load_history_tapped"
+          }
+        }
+      }
+    },
+    {
+      "type": "input",
+      "props": {
+        "frame": {
+          "y": 120,
+          "x": 20,
+          "width": 360,
+          "height": 50
         },
-        "id" : "input_url",
-        "radius" : 5
+        "id": "input_url",
+        "radius": 5
       }
     }
   ]
