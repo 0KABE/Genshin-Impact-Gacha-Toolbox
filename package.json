@@ -1,13 +1,13 @@
 {
   "name": "Genshin_Impact_Gacha_Toolbox",
   "version": "1.0.0",
-  "description": "",
+  "description": "A toolbox to get gacha history in Genshin Impact",
   "main": "index.js",
   "dependencies": {
     "axios": "^0.25.0",
     "yargs": "^17.3.1"
   },
   "keywords": [],
-  "author": "",
+  "author": "0KABE",
   "license": ""
 }
