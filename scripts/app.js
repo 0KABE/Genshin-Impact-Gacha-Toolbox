@@ -33,7 +33,7 @@ function analyzeHistory(histories) {
 
     const lastRank5 = histories[type].find(value => value.rank_type === "5")
     const lastRank5Index = histories[type].indexOf(lastRank5)
-    Statistics[type].countFromPreviousRankType5 = lastRank5Index >= 0 ? lastRank5Index : 0
+    Statistics[type].countFromPreviousRankType5 = lastRank5Index >= 0 ? lastRank5Index : Statistics[type].totalCount
 
     Statistics[type].countToGuaranteed = GuaranteedCount[type] - Statistics[type].countFromPreviousRankType5
     Statistics[type].averageCountForRankType5 =
